@@ -5,7 +5,7 @@
 **E**pigenetic **M**etagenomic **M**otif **C**haracterization **Assembler**
 
 ## Overview
-This tool compares the distribution of IPDs between NATIVE and WGA data for every existing kmer in the genome (using log-likelihood rations) and then uses an iterative greedy procedure to identify significant motifs.  The output of this tool is a list of the significantly modified kmers.
+This tool uses epigenetically modified motifs to fine map the bacterial genomes present in mixed metagenomic samples. The output is fully assembled genomes present in the metagenomic sample. 
 
 ##Running
 To run the code simply type:
@@ -28,12 +28,12 @@ best.edges: the best.edges file produced by Celera Assembler in the tigstore
 <li>PYTHON </li>
 <li>pbtools </li>
 <li>pbcore</li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>numpy</li>
+<li>h5py</li>
+<li>shlex</li>
+<li>subprocess</li>
+<li>networkx</li>
+<li>matplotlib</li>
 </ul>
  
 ## Citation
