@@ -10,7 +10,7 @@ This tool uses epigenetically modified motifs to fine map the bacterial genomes 
 ##Running
 To run the code simply type:
 
-<code>sh EMMCAssemble.sh [reference.fasta] [nat.cmp.h5] [motif file] [best.edges] [name] [output directory] </code>
+<code>sh EMMCAssemble.sh [reference.fasta] [nat.cmp.h5] [motif file] [best.edges] [name] </code>
 
 ### INPUTS
 
@@ -23,8 +23,6 @@ motif file: a file listing the motifs and epigenetically modified positions. An 
 best.edges: the best.edges file produced by Celera Assembler in the tigstore
 
 name: the name tag for the files created
-
-output directory: the output directory where files will be deposited
 
 ### INSTALLATION/REQUIREMENTS
 
