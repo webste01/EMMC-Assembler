@@ -20,7 +20,7 @@ nat.cmp.h5: cmph5 file for the native (NOT WGA) metagenomic sample
 
 motif file: a file listing the motifs and epigenetically modified positions. An example is included here as "example_motif.txt"
 
-best.edges: the best.edges file produced by Celera Assembler in the tigstore
+best.edges: the best.edges file produced by Celera Assembler from the unitigger
 
 name: the name tag for the files created
 
