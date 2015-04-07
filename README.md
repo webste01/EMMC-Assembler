@@ -1,5 +1,5 @@
 # EMMC-Assembler
-EMMC-Assembler
+
 ========
 
 **E**pigenetic **M**etagenomic **M**otif **C**haracterization **Assembler**
@@ -15,8 +15,11 @@ To run the code simply type:
 ### INPUTS
 
 reference.fasta: reference fasta file for the metagenomic sample
+
 nat.cmp.h5: cmph5 file for the native (NOT WGA) metagenomic sample
+
 motif file: a file listing the motifs and epigenetically modified positions. An example is included here as "example_motif.txt"
+
 best.edges: the best.edges file produced by Celera Assembler in the tigstore
 
 ### INSTALLATION/REQUIREMENTS
