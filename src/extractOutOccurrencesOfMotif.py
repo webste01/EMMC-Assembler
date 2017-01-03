@@ -11,10 +11,26 @@ motif_file=sys.argv[3]
 tag=sys.argv[4]
 motifs=[]
 modpositions=[]
+
+# for now recall motifs using a simple mapping to get rid of degenerate bases
+# more generally we will need to actually account correctly for degenerate seq
+
+def remap_bases (base):
+	if base in "ACGT":
+		return base
+	else:
+		return "N"
+
 with open(motif_file) as f:
 	for l in f:
 		l = l.strip().split()
+		print(l)
 		m,i=l[0:2]
+		print m
+		m = "".join(map(remap_bases, list(m)))
+		print m
+		print i
+		#m,i=l[0:1]
 		motifs.append(m)
 		modpositions.append(int(i))
 		
@@ -82,7 +98,11 @@ with open (median_position_fn) as f:
             motif = posToMotif[pos]
             contigIpds = motifIpds.setdefault(motif, {})
             posToContig = motifDict[motif]
-            contigIpds.setdefault(posToContig[pos], []).append(ipd)
+	    pos_ipd = [pos,ipd]
+	    tmp = str(pos_ipd)[1:-1]
+	    print tmp 
+            contigIpds.setdefault(posToContig[pos], []).append(tmp)
+
 
 # contig, mean IPD, motif 
 on="%s.cim" % tag
@@ -93,11 +113,11 @@ motifkeys.sort()
 for motif in motifkeys:
     contigIpds = motifIpds[motif]
     for contig, values in contigIpds.items():
-	print >>sys.stderr, motif, contig, numpy.median(values), numpy.mean(values)
+	#print >>sys.stderr, motif, contig, numpy.median(values), numpy.mean(values)
         for val in values:
-         #   print contig, val
 		m=motif[:-1]
-		out_name.write("%s %.5f %s\n" % (contig, val, m))
+		#print tmp_val
+		out_name.write("%s %s %s\n" % (contig, val, m))
 
 
 
