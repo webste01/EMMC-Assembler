@@ -12,6 +12,17 @@ tag=sys.argv[4]
 motifs=[]
 modpositions=[]
 
+
+iupacDict = {}
+iupacDict['A'] = set(['A', 'W', 'M', 'R', 'D', 'H', 'V', 'N'])
+iupacDict['T'] = set(['T','W','K','Y','B','D','H','N'])
+iupacDict['C'] = set(['C','S','M','Y','B','H','V','N'])
+iupacDict['G'] = set(['G','S','K','R','B','D','V','N'])
+iupacDict['N'] = set(['A','C','G','T','U','W','S','M','K','R','Y','B','D','H','V','N','Z'])
+
+
+
+
 # for now recall motifs using a simple mapping to get rid of degenerate bases
 # more generally we will need to actually account correctly for degenerate seq
 
@@ -48,7 +59,7 @@ posToMotif = {}
 def equalityCheck (seq1, seq2, m):
     # let seq1 be allowed to have degenerate bases
     for i in range(m):
-        if not(seq1[i] == seq2[i] or seq1[i] == "N"):
+        if not(seq1[i] in iupacDict[seq2[i]]):
             return False
     return True
 
