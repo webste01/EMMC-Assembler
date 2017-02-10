@@ -14,11 +14,17 @@ modpositions=[]
 
 
 iupacDict = {}
-iupacDict['A'] = set(['A', 'W', 'M', 'R', 'D', 'H', 'V', 'N'])
-iupacDict['T'] = set(['T','W','K','Y','B','D','H','N'])
-iupacDict['C'] = set(['C','S','M','Y','B','H','V','N'])
-iupacDict['G'] = set(['G','S','K','R','B','D','V','N'])
-iupacDict['N'] = set(['A','C','G','T','U','W','S','M','K','R','Y','B','D','H','V','N','Z'])
+iupacDict['A'] = set(['A', 'W', 'M', 'R', 'D', 'H', 'V', 'N','a','w','m','r','d','h','v','n'])
+iupacDict['T'] = set(['T','W','K','Y','B','D','H','N','t','w','k','y','b','d','h','n'])
+iupacDict['C'] = set(['C','S','M','Y','B','H','V','N','c','s','m','y','b','h','v','n'])
+iupacDict['G'] = set(['G','S','K','R','B','D','V','N','g','s','k','r','b','d','v','n'])
+iupacDict['N'] = set(['A','C','G','T','U','W','S','M','K','R','Y','B','D','H','V','N','Z','a','c','t','g','u','w','s','m','k','r','y','b','d','h','v','n','z'])
+iupacDict['a'] = set(['A', 'W', 'M', 'R', 'D', 'H', 'V', 'N','a','w','m','r','d','h','v','n'])
+iupacDict['t'] = set(['T','W','K','Y','B','D','H','N','t','w','k','y','b','d','h','n'])
+iupacDict['c'] = set(['C','S','M','Y','B','H','V','N','c','s','m','y','b','h','v','n'])
+iupacDict['g'] = set(['G','S','K','R','B','D','V','N','g','s','k','r','b','d','v','n'])
+iupacDict['n'] = set(['A','C','G','T','U','W','S','M','K','R','Y','B','D','H','V','N','Z','a','c','t','g','u','w','s','m','k','r','y','b','d','h','v','n','z'])
+
 
 
 
